@@ -1,5 +1,5 @@
-export const increment = () => {
+export const loadReducer = () => {
   return {
-    type: "INCREMENT",
+    type: "LOAD_ESTATES",
   };
 };
