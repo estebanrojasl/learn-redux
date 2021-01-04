@@ -5,11 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { createStore } from "redux";
-import allReducer from "./reducers";
 import { Provider } from "react-redux";
+import counterReducer from "./reducers/counter";
 
 const store = createStore(
-  allReducer,
+  counterReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
