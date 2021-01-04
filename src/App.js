@@ -3,15 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { loadReducer } from "./actions";
 
 function App() {
-  const id = useSelector((state) => JSON.stringify(state));
+  const id = useSelector((state) => state._id);
   const owner = useSelector((state) => state.owner);
   const dispatch = useDispatch();
+  dispatch(loadReducer());
 
   return (
     <div className="App">
       <h1>Id {id}</h1>
       <h1>Owner {owner}</h1>
-      <button onClick={() => dispatch(loadReducer())}>+</button>
+      {/* <button onClick={() => dispatch(loadReducer())}>+</button> */}
     </div>
   );
 }

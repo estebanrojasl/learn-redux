@@ -1,16 +1,7 @@
-const fetcher = () => {
-  fetch("https://mongo-real-estate.herokuapp.com/api/v1/acamica/estate")
-    .then((response) => response.json())
-    .then((response) => {
-      return response;
-    });
-};
-
-const loadReducer = async (state, action) => {
+const loadReducer = (state = {}, action) => {
   switch (action.type) {
     case "LOAD_ESTATES":
-      state = fetcher();
-      return state;
+      return action.payload;
     default:
       return state;
   }
